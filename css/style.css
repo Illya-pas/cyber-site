@@ -71,14 +71,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.header {
+.header__top {
   height: 40px;
-  width: 100%;
-  z-index: -1;
   background-color: #1B005B;
 }
 
-.header__top {
+.header__top__cont {
   display: flex;
   height: 40px;
   justify-content: space-between;
@@ -86,10 +84,10 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-size: 14px;
 }
-.header__top a {
+.header__top__cont a {
   color: white;
 }
-.header__top a:hover {
+.header__top__cont a:hover {
   color: #E9E9E7;
   transition: 0.1s;
 }
@@ -120,11 +118,81 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header__bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  position: fixed;
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
 }
+
+.header__bottom__cont {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__bottom__cont .header__div_logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header__bottom__cont .header__div_logo .logo_name {
+  margin-left: 30px;
+  width: 120px;
+}
+.header__bottom__cont .header__div_logo .logo_name h3 {
+  color: #1B005B;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.header__bottom__cont .header__div_logo .logo_name p {
+  font-weight: 500;
+  color: #737373;
+  font-size: 11px;
+}
+.header__bottom__cont .nav_menu ul {
+  display: flex;
+}
+.header__bottom__cont .nav_menu ul li {
+  margin-left: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header__bottom__cont .nav_menu ul li:first-child {
+  margin: 0;
+}
+.header__bottom__cont .nav_menu ul li:hover {
+  color: #4D0FDD;
+  transition: 0.3s;
+}
+.header__bottom__cont .nav_menu ul li:first-child {
+  color: #4D0FDD;
+}
+.header__bottom__cont .button_blue button {
+  padding: 10px 35px;
+  font-size: 16px;
+  color: #fff;
+  border: 2px solid #4200DB;
+  background-color: #4200DB;
+  transition: 0.3s;
+}
+.header__bottom__cont .button_blue button:hover {
+  background-color: #fff;
+  color: #4200DB;
+  transition: 0.3s;
+}
+
 .container {
   width: 65%;
   margin-left: 17.5%;
+}
+
+.first_block {
+  width: 100%;
+  margin-top: 70px;
+  height: 586px;
+  background-image: url("https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-content-bg01.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
