@@ -1,0 +1,1 @@
+jQuery((function(){window.addEventListener("scroll",()=>{window.scrollY>40?($(".header__bottom").css({position:"fixed",top:"0"}),$(".first_block").css({"margin-top":"70px"})):window.scrollY<40&&($(".header__bottom").css({position:"static"}),$(".first_block").css({"margin-top":"0"}))})}));
