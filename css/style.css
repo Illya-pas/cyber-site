@@ -657,8 +657,8 @@ body {
   overflow: hidden;
 }
 
-.slider__item1, .slider__item1 {
-  display: inline-block;
+.slider__items {
+  display: none;
 }
 
 /* Слайд */
