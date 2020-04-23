@@ -1,5 +1,7 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
 /* ZEROING */
 * {
   padding: 0;
@@ -124,6 +126,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   height: 70px;
   width: 100%;
+  z-index: 100;
 }
 
 .header__bottom__cont {
@@ -180,11 +183,52 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   padding: 10px 35px;
 }
-body {
-  font-family: "Open Sans", sans-serif;
+.menu_burger {
+  position: relative;
+  display: none;
+  height: 40px;
+  width: 40px;
+  margin-top: 7px;
+  background-color: #fff;
+}
+.menu_burger:before {
+  content: "";
+  width: 26px;
+  height: 5px;
+  background-color: #4200DB;
+  position: absolute;
+  margin: 6px 0 0 7px;
+  border-radius: 2px;
+}
+.menu_burger:after {
+  content: "";
+  width: 26px;
+  height: 5px;
+  background-color: #4200DB;
+  position: absolute;
+  margin: 27px 0 0 7px;
+  border-radius: 2px;
 }
 
-.fourth_block, .third_block, .second_block, .first_block, .header__top, .header__bottom {
+.burger {
+  width: 26px;
+  height: 5px;
+  background-color: #4200DB;
+  position: absolute;
+  margin: 16px 0 0 7px;
+  border-radius: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.footer_bottom__content, .footer_top, .eighth_block, .seventh_block, .sixth_block, .fourth_block, .third_block, .second_block, .first_block, .header__top, .header__bottom {
   display: flex;
   justify-content: center;
 }
@@ -203,7 +247,7 @@ body {
   transition: 0.3s;
 }
 
-.button_white, .button_blue {
+.fifth_block span, .button_white, .button_blue {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,6 +313,7 @@ body {
 
 .second_block {
   height: 650px;
+  position: relative;
 }
 
 .overline {
@@ -313,6 +358,28 @@ body {
   transition: 0.3s;
 }
 
+.go_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: -50px;
+  right: 40px;
+  background-color: #585858;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.go_top:hover {
+  background-color: #4200DB;
+  transition: 0.1s;
+}
+.go_top span {
+  color: white;
+}
+
 .third_block {
   height: 650px;
   background-image: url("https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-content-bg02.jpg");
@@ -331,8 +398,8 @@ body {
 }
 .third_block__cont p {
   margin-top: 30px;
-  line-height: 1.6;
   font-size: 16px;
+  line-height: 1.6;
 }
 
 .header_div__third {
@@ -342,6 +409,7 @@ body {
 .header_div__third h1 {
   font-size: 40px;
   font-weight: 400;
+  font-family: "Titillium Web", sans-serif;
 }
 .header_div__third h1:last-child {
   font-weight: 700;
@@ -360,26 +428,31 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  line-height: 1.5;
   margin-right: 20px;
+  line-height: 1.5;
 }
 
 .fourth_block {
-  height: 950px;
+  height: 1000px;
+}
+
+.slider_header h1, .sixth_header h1, .fourth_block__cont h1 {
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.sixth_header h1:last-child, .fourth_block__cont h1:last-child {
+  font-weight: 700;
 }
 
 .fourth_block__cont {
   display: flex;
   flex-direction: column;
 }
-.fourth_block__cont h1 {
-  margin-top: 30px;
-  font-size: 40px;
-  font-weight: 400;
-}
 .fourth_block__cont h1:last-child {
   margin-top: 10px;
-  font-weight: 700;
 }
 
 .fourth_block__list {
@@ -388,6 +461,9 @@ body {
 .fourth_block__list ul {
   display: flex;
   justify-content: space-between;
+}
+.fourth_block__list img {
+  width: 100%;
 }
 .fourth_block__list li {
   width: 380px;
@@ -411,16 +487,382 @@ body {
 
 .fourth_block__describe {
   font-size: 14px;
-  line-height: 1.6;
   margin-bottom: 22px;
+  line-height: 1.5;
 }
 
 .more_prod {
-  margin-top: 50px;
+  margin-top: 44px;
   transition: 0.3s;
   cursor: pointer;
 }
 .more_prod:hover {
   color: #4D0FDD;
   transition: 0.3s;
+}
+
+.fifth_block {
+  display: flex;
+  align-items: center;
+}
+.fifth_block span {
+  color: #fff;
+  border: 2px solid #fff;
+  margin-right: 5px;
+}
+.fifth_block span:hover {
+  color: black;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.fifth_block h1 {
+  font-weight: 700;
+  font-size: 33px;
+  color: white;
+  line-height: 1.5;
+  font-family: "Titillium Web", sans-serif;
+}
+.fifth_block p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #fff;
+  width: 514px;
+}
+
+.fifth_block__left {
+  height: 200px;
+  width: 50%;
+  background-image: url("https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-home-img04.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fifth_block__right {
+  height: 200px;
+  width: 50%;
+  background-image: url("https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-home-img05.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sixth_block {
+  height: 800px;
+}
+
+.sixth_header {
+  display: flex;
+}
+.sixth_header h1:last-child {
+  margin-left: 10px;
+}
+
+.sixth_block__item {
+  height: 440px;
+  width: 380px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.sixth_block__item:nth-child(2) .sixth__list__header {
+  background-color: #4200DB;
+}
+
+.sixth_block__list {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sixth__list__header {
+  width: 100%;
+  height: 185px;
+  background-color: #1B005B;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+}
+.sixth__list__header h1 {
+  font-size: 36px;
+  margin-top: 0;
+  line-height: 1.6;
+}
+.sixth__list__header i {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.sixth__list__content {
+  height: 100%;
+  background-color: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sixth__list__content p {
+  margin-top: -15px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.sixth__list__content .button_blue {
+  margin-top: 20px;
+}
+
+.seventh_block {
+  height: 570px;
+  background-image: url("https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-content-bg03.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seventh__slider_block {
+  width: 720px;
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.slider_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slider_header h1 {
+  margin: 0 0 20px 0;
+}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+  display: inline-flex;
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+  width: 620px;
+  overflow: hidden;
+}
+
+/* Слайд */
+.slick-slide {
+  width: 620px;
+  display: inline-block;
+}
+.slick-slide img {
+  margin: 50px 0 25px 0;
+  display: block;
+  width: 100%;
+}
+.slick-slide i {
+  font-size: 16px;
+}
+.slick-slide h5 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 25px;
+  letter-spacing: 1px;
+}
+
+/* Стрелка */
+.slick-arrow {
+  height: 30px;
+}
+.slick-arrow span {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  font-size: 19px;
+  margin-top: 150px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.slick-arrow span:hover {
+  color: #29008A;
+  transition: all 0.3s;
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev span {
+  margin-left: -40px;
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next span {
+  margin-left: 20px;
+}
+
+.eighth_block {
+  height: 900px;
+}
+
+.eighth_header h1 {
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 400;
+  display: inline-block;
+  font-family: "Titillium Web", sans-serif;
+}
+.eighth_header h1:last-child {
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.eighth__content {
+  margin-top: 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.eighth__content div {
+  height: 523px;
+  width: 380px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.eighth__content div div {
+  padding: 92% 25px 0 25px;
+}
+.eighth__content i {
+  font-size: 16px;
+}
+.eighth__content h2 {
+  margin-top: 5px;
+  font-size: 24px;
+}
+.eighth__content p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.eighth__content .eighth__first {
+  background-image: url("https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-home-img06.jpg");
+}
+.eighth__content .eighth__second {
+  background-image: url("https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-home-img07.jpg");
+}
+.eighth__content .eighth__third {
+  background-image: url("https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-home-img08.jpg");
+}
+
+.footer_top {
+  color: #fff;
+  background-color: black;
+  height: 360px;
+  align-items: center;
+}
+.footer_top .container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer_top .container div {
+  width: 370px;
+}
+.footer_top h2 {
+  font-size: 20px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+}
+.footer_top p {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #828282;
+  line-height: 1.5;
+}
+.footer_top .footer__soc_links {
+  margin-top: 30px;
+}
+.footer_top .footer__soc_links span {
+  margin-right: 15px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.footer_top .footer__soc_links span:hover:before {
+  color: #E9E9E7;
+  transition: 0.1s;
+}
+.footer_top .footer__soc_links span:last-child {
+  font-size: 17px;
+}
+.footer_top .footer__soc_links span:before {
+  color: #fff;
+}
+
+.footer__menu ul {
+  margin-top: 15px;
+  font-size: 16px;
+  display: flex;
+}
+.footer__menu ul li {
+  margin: 20px 0 0 0;
+}
+.footer__menu ul li span {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.footer__menu ul li span:hover {
+  color: #4D0FDD;
+  transition: 0.2s;
+}
+
+.footer__form input {
+  margin-top: 37px;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+}
+.footer__form input::placeholder {
+  font-size: 14px;
+  color: #3E3E3E;
+}
+.footer__form span {
+  margin-top: 12px;
+}
+
+.footer_bottom {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color: black;
+  height: 110px;
+}
+.footer_bottom .footer__line {
+  height: 1px;
+  width: 100%;
+  background-color: #828282;
+}
+
+.footer_bottom__content {
+  height: 100%;
+  font-size: 16px;
+  color: #828282;
+}
+.footer_bottom__content .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer_bottom__content .container span {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.footer_bottom__content .container span:hover {
+  color: #BEBEBE;
+  transition: 0.2s;
 }

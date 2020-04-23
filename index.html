@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="icomoon/style.css">
+	<link rel="stylesheet" href="css/media.css">
 	<script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
-<div class="header">
+<div id="header">
 	<div class="header__top">
 		<div class="container">
 			<div class="header__top__cont">
@@ -42,9 +45,12 @@
 						<p>CYBERSECURITY COMPANY</p>
 					</div>
 				</div>
+				<div class="menu_burger">
+					<span class="burger"></span>
+				</div>
 				<div class="nav_menu">
 					<ul>
-						<li>HOME</li>
+						<li><span>HOME</span></li>
 						<li>PRODUCTS</li>
 						<li>SERVICES</li>
 						<li>SOLUTIONS</li>
@@ -61,6 +67,7 @@
 		</div>	
 	</div>	
 </div>	<div class="content">
+<!-- 				FIRST BLOCK -->
 		<div class="first_block">
 			<div class="container">
 				<div class="first_block__cont">
@@ -75,7 +82,7 @@
 				</div>	
 			</div>
 		</div>
-
+<!-- 				SECOND BLOCK -->
 		<div class="second_block">
 			<div class="container">
 				<div class="header_div">
@@ -120,8 +127,9 @@
 					</ul>
 				</div>
 			</div>
+			<a class="go_top" href="#header"><span class="icon-chevron-arrow-up"></span></a>
 		</div>
-
+<!-- 				THIRD BLOCK -->
 		<div class="third_block">
 			<div class="container">
 				<div class="third_block__cont">
@@ -139,7 +147,7 @@
 				</div>
 			</div>
 		</div>
-
+<!-- 				FOURTH BLOCK -->
 		<div class="fourth_block">
 			<div class="container">
 				<div class="fourth_block__cont">
@@ -171,6 +179,176 @@
 						</ul>
 					</div>
 					<div class="more_prod">View More Product >></div>
+				</div>
+			</div>
+		</div>
+<!-- 				FIFTH BLOCK -->
+		<div class="fifth_block">
+			<div class="fifth_block__left">
+				<div class="left__describe">
+					<h1>Free Trial</h1>
+					<p>Try before your buy. Start your free product trial now.</p>
+				</div>
+				<span>Request a Demo</span>
+			</div>
+			<div class="fifth_block__right">
+				<div class="right__describe">
+					<h1>Product Deployment</h1>
+					<p>Deploy, optimize, and manage your Shield products.</p>
+				</div>
+				<span>Learn More</span>
+			</div>
+		</div>
+<!-- 				SIXTH BLOCK -->
+		<div class="sixth_block">
+			<div class="container">
+				<div class="overline"></div>
+				<div class="sixth_header">
+					<h1>Security</h1>
+					<h1>Packages</h1>
+				</div>
+				<div class="sixth_block__list">
+					<div class="sixth_block__item">
+						<div class="sixth__list__header">
+							<h1>Basic</h1>
+							<i>Free</i>
+						</div>
+						<div class="sixth__list__content">
+							<p>30 Days Product Testing<br>no Credit Card Required<br>One Website<br>Upgrade Anytime for Protection<br>24/7 Live Assistance</p>
+							<span class="button_blue">Free Demo</span>
+						</div>
+					</div>
+
+					<div class="sixth_block__item">
+						<div class="sixth__list__header">
+							<h1>Most Popular</h1>
+							<i>$12.50/mo for 1 website</i>
+						</div>
+						<div class="sixth__list__content">
+							<p>Complete Protection<br>Scan Every 6 Hrs<br>Unlimited Malware Removal<br>24/7 Live Assistance<br>Easy Deployment</p>
+							<span class="button_blue">Get Now</span>
+						</div>
+					</div>
+
+					<div class="sixth_block__item">
+						<div class="sixth__list__header">
+							<h1>Premium</h1>
+							<i>$24.50/mo for 1 website</i>
+						</div>
+						<div class="sixth__list__content">
+							<p>Full Service<br>Scan Every 4 Hrs<br>Expert Security Tuning<br>Unlimited Malware Removal<br>24/7 Live Assistance</p>
+							<span class="button_blue">Get Now</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- 				SEVENTH BLOCK -->
+		<div class="seventh_block">
+			<div class="seventh__slider_block">
+				<div class="slider_header">
+					<h1>Testimonials</h1>
+					<div class="overline"></div>
+				</div>
+
+				<div class="slider__wrapper">
+					<div class="slider__items">
+						<div class="slider__item1">
+							<img src="https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-testi-img-02.png" alt="Photo">
+							<i>“Shield's support for multiple languages is particularly useful for our multicultural company, and we appreciate that the extensive reporting functionalities allow us to track our efforts and communicate metrics to our stakeholders.</i>
+							<h5>GEORGE MCGREEN</h5>
+						</div>
+
+						<div class="slider__item2">
+							<img src="https://template76279.motopreview.com/mt-demo/76200/76279/mt-content/uploads/2018/12/mt-1700-testi-img-01.png" alt="Photo">
+							<i>“We had a website infected with Malware and it was redirecting to an inappropriate website. Shield’s team quickly resolved the problem and removed all of the infected files. Well priced and great service!</i>
+							<h5>WILLIAM GORBER</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- 				EIGHTH BLOCK -->
+		<div class="eighth_block">
+			<div class="container">
+
+				<div class="overline"></div>
+				<div class="eighth_header">
+					<h1>Cybersecurity</h1>
+					<h1>News</h1>
+				</div>
+				<div class="eighth__content">
+					<div class="eighth__first">
+						<div>
+							<i>September 25, 2018</i>
+							<h2>Personal Cyber Insurance</h2>
+							<p>In an effort to help individuals who have been the victim of cybercrimes, insurance providers announced it will now include Personal Cybercrime coverage in its insurance policies.</p>
+						</div>
+					</div>
+
+					<div class="eighth__second">
+						<div>
+							<i>August 18, 2018</i>
+							<h2>IT Security</h2>
+							<p>Cybersecurity is a hot topic, not just in large enterprise and government organizations, but has now found its way to the kitchen table and is something we all have an opinion on.</p>
+						</div>
+					</div>
+
+					<div class="eighth__third">
+						<div>
+							<i>August 5, 2018</i>
+							<h2>Healthcare Security Solutions</h2>
+							<p>The Healthcare industry by its very nature is populated with some amazing people who are devoted to those in need of physical and mental care.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- 				FOOTER -->
+		<div class="footer_top">
+			<div class="container">
+				<div class="footer__about_us">
+					<h2>About us</h2>
+					<p>We are a world class company supplying tailored security solutions to homes, businesses and public sector organizations throughout the USA.</p>
+					<div class="footer__soc_links">
+						<span class="icon-twitter"></span>
+						<span class="icon-facebook1"></span>
+						<span class="icon-pinterest"></span>
+						<span class="icon-instagram1"></span>
+						<span class="icon-google-plus"></span>
+					</div>
+				</div>
+
+				<div class="footer__menu">
+					<h2>Menu</h2>
+					<ul>
+						<div>
+							<li><span>Home</span></li>
+							<li><span>Products</span></li>
+							<li><span>Services</span></li>
+							<li><span>Solutions</span></li>
+						</div>
+						<div>
+							<li><span>Packages</span></li>
+							<li><span>Resources</span></li>
+							<li><span>About Us</span></li>
+							<li><span>Contacts</span></li>
+						</div>
+					</ul>
+				</div>
+
+				<div class="footer__form">
+					<h2>Receive news right to your inbox</h2>
+					<input type="text" placeholder="Enter your e-mail here *">
+					<span class="button_blue">Subscribe</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="footer__line"></div>
+			<div class="footer_bottom__content">
+				<div class="container">
+					<h3>Copyright © 2019 <span>All Rights Reserved</span>.</h3>
 				</div>
 			</div>
 		</div>
